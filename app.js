@@ -166,3 +166,12 @@ for(let i = 0; i < bondFilms.length; i++){
   }
 }
 console.log(oddBonds);
+
+let totalGross = 0
+for(let i = 0; i < bondFilms.length; i++){
+  let gross = bondFilms[i].gross
+  gross = gross.replace("$", "").replace(",","")
+  let grossAsInt = parseInt(gross)
+    totalGross += grossAsInt
+}
+console.log(totalGross);
